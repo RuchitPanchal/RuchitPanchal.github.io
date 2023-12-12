@@ -1,6 +1,6 @@
-// Project Title
-// Your Name
-// Date
+// Capstone Project: Chess Game
+// Ruchit Panchal
+// 12 December 2023  
 //
 // Extra for Experts:
 // - describe what you did to take this project "above and beyond"
