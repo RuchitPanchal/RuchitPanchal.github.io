@@ -17,9 +17,14 @@ const paddleWidth = 10;
 const paddleHeight = 60;
 const paddleSpeed = 10;
 
-
-
 let ball, ballSpeedX, ballSpeedY;
+
+let obstacle;
+const obstacleWidth =  10;
+const obstacleHeight = 100;
+const obstacleX = 380;
+const obstacleY = 150;
+
 
 
 
@@ -36,7 +41,15 @@ function setup() {
   ballSpeedY = 5* sin(angle);
 
 
+  obstacle ={
+    x: obstacleX,
+    y: obstacleY,
+    width: obstacleWidth,
+    height: obstacleHeight,
 
+  
+  
+  };
 }
 
 function draw() {
@@ -91,6 +104,15 @@ function moveplayer2(){
 function moveBall(){
   ball.x += ballSpeedX;
   ball.y += ballSpeedY;
+
+  // Ball Collision Wit Top/ Bottom Walls
+  if(ball.y< 0 || ball.y > height){
+    ballSpeedY *=-1;
+  }
+
+  // WHen Ball Hits the Paddles
+
+  if(ballSpeedX)
   
 }
 
